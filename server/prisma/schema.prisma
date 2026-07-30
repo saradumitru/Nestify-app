@@ -1,0 +1,346 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model User {
+  id                   Int              @id @default(autoincrement())
+  name                 String
+  email                String           @unique
+  password             String
+  role                 String           @default("USER")
+  passwordResetToken   String?          @unique
+  passwordResetExpires DateTime?
+  favorites            Favorite[]
+  createdAt            DateTime         @default(now())
+  updatedAt            DateTime         @default(now()) @updatedAt
+  moodboards           Moodboard[]
+  quizResults          QuizResult[]
+  projects             Project[]
+  moodboardLikes       MoodboardLike[]
+  designerProfile      DesignerProfile?
+}
+
+model StyleCategory {
+  id          Int      @id @default(autoincrement())
+  name        String
+  slug        String   @unique
+  description String?
+  styles      Style[]
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @default(now()) @updatedAt
+}
+
+model Style {
+  id          Int          @id @default(autoincrement())
+  name        String
+  title       String
+  slug        String       @unique
+  kicker      String?
+  description String
+  history     String?
+  period      String?
+  audience    String?
+  colors         Json?
+  materials      Json?
+  imageUrl       String?
+  gallery        Json?
+  dominantColors Json?
+  quizResults QuizResult[]
+
+  categoryId Int
+  category   StyleCategory @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+
+  images        InteriorImage[]
+  galleryPhotos StyleGalleryPhoto[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @default(now()) @updatedAt
+}
+
+model StyleGalleryPhoto {
+  id        Int      @id @default(autoincrement())
+  styleId   Int
+  style     Style    @relation(fields: [styleId], references: [id], onDelete: Cascade)
+  imageUrl  String
+  caption   String?
+  objects   StyleGalleryObject[]
+  favorites Favorite[]
+  createdAt DateTime @default(now())
+}
+
+model StyleGalleryObject {
+  id          Int               @id @default(autoincrement())
+  photoId     Int
+  photo       StyleGalleryPhoto @relation(fields: [photoId], references: [id], onDelete: Cascade)
+  name        String
+  description String?
+  shopLink    String?
+  price       String?
+  imageUrl    String?
+  createdAt   DateTime          @default(now())
+}
+
+model InteriorImage {
+  id          Int     @id @default(autoincrement())
+  title       String
+  slug        String  @unique
+  subtitle    String?
+  description String?
+  imageUrl    String?
+  roomType    String?
+
+  styleId Int
+  style   Style @relation(fields: [styleId], references: [id], onDelete: Cascade)
+
+  favorites      Favorite[]
+  objects        ImageObject[]
+  galleryPhotos  InteriorGalleryPhoto[]
+
+  createdAt      DateTime        @default(now())
+  updatedAt      DateTime        @default(now()) @updatedAt
+  moodboardItems MoodboardItem[]
+}
+
+model InteriorGalleryPhoto {
+  id         Int           @id @default(autoincrement())
+  interiorId Int
+  interior   InteriorImage @relation(fields: [interiorId], references: [id], onDelete: Cascade)
+  imageUrl   String
+  caption    String?
+  objects    InteriorGalleryObject[]
+  favorites  Favorite[]
+  createdAt  DateTime      @default(now())
+}
+
+model InteriorGalleryObject {
+  id          Int                  @id @default(autoincrement())
+  photoId     Int
+  photo       InteriorGalleryPhoto @relation(fields: [photoId], references: [id], onDelete: Cascade)
+  name        String
+  description String?
+  shopLink    String?
+  price       String?
+  imageUrl    String?
+  createdAt   DateTime             @default(now())
+}
+
+model Favorite {
+  id                     Int  @id @default(autoincrement())
+  userId                 Int
+  imageId                Int?
+  styleGalleryPhotoId    Int?
+  interiorGalleryPhotoId Int?
+
+  user                 User                  @relation(fields: [userId], references: [id], onDelete: Cascade)
+  image                InteriorImage?        @relation(fields: [imageId], references: [id], onDelete: Cascade)
+  styleGalleryPhoto    StyleGalleryPhoto?    @relation(fields: [styleGalleryPhotoId], references: [id], onDelete: Cascade)
+  interiorGalleryPhoto InteriorGalleryPhoto? @relation(fields: [interiorGalleryPhotoId], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now())
+
+  @@unique([userId, imageId])
+}
+
+model ImageObject {
+  id          Int     @id @default(autoincrement())
+  name        String
+  description String?
+  imageUrl    String?
+  shopLink    String?
+
+  imageId Int
+  image   InteriorImage @relation(fields: [imageId], references: [id], onDelete: Cascade)
+
+  productLinks ProductLink[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @default(now()) @updatedAt
+}
+
+model ProductLink {
+  id    Int     @id @default(autoincrement())
+  title String
+  url   String
+  price String?
+  store String?
+
+  imageObjectId Int
+  imageObject   ImageObject @relation(fields: [imageObjectId], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @default(now()) @updatedAt
+}
+
+model MovieHouse {
+  id          Int      @id @default(autoincrement())
+  title       String
+  slug        String   @unique
+  kicker      String?
+  description String
+  history     String?
+  imageUrl    String?
+  gallery     Json?
+  locations   MovieLocation[]
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @default(now()) @updatedAt
+}
+
+model MovieLocation {
+  id           Int        @id @default(autoincrement())
+  movieHouseId Int
+  movieHouse   MovieHouse @relation(fields: [movieHouseId], references: [id], onDelete: Cascade)
+  title        String
+  kicker       String?
+  description  String?
+  history      String?
+  imageUrl     String?
+  gallery      Json       @default("[]")
+  order        Int        @default(0)
+  createdAt    DateTime   @default(now())
+  updatedAt    DateTime   @default(now()) @updatedAt
+}
+
+model Moodboard {
+  id     Int    @id @default(autoincrement())
+  title  String
+  userId Int
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  items MoodboardItem[]
+  likes MoodboardLike[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @default(now()) @updatedAt
+  shareId   String?
+  isPublic  Boolean  @default(false)
+  views     Int      @default(0)
+  projectId Int?
+  project   Project? @relation(fields: [projectId], references: [id], onDelete: SetNull)
+}
+
+model MoodboardLike {
+  id          Int       @id @default(autoincrement())
+  userId      Int
+  moodboardId Int
+  user        User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  moodboard   Moodboard @relation(fields: [moodboardId], references: [id], onDelete: Cascade)
+  createdAt   DateTime  @default(now())
+
+  @@unique([userId, moodboardId])
+}
+
+model MoodboardItem {
+  id Int @id @default(autoincrement())
+
+  moodboardId Int
+  imageId     Int
+
+  moodboard Moodboard     @relation(fields: [moodboardId], references: [id], onDelete: Cascade)
+  image     InteriorImage @relation(fields: [imageId], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now())
+
+  @@unique([moodboardId, imageId])
+}
+
+model QuizResult {
+  id     Int  @id @default(autoincrement())
+  userId Int
+  user   User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  recommendedStyleId Int?
+  recommendedStyle   Style? @relation(fields: [recommendedStyleId], references: [id], onDelete: SetNull)
+
+  answers   Json
+  score     Json?
+  createdAt DateTime @default(now())
+}
+
+model Project {
+  id          Int      @id @default(autoincrement())
+  title       String
+  description String?
+  createdAt   DateTime @default(now())
+
+  userId     Int
+  user       User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  moodboards Moodboard[]
+  tasks ProjectTask[]
+  inspirations ProjectInspiration[]
+}
+
+model ProjectTask {
+  id        Int      @id @default(autoincrement())
+  text      String
+  completed Boolean  @default(false)
+  createdAt DateTime @default(now())
+
+  projectId Int
+  project   Project @relation(fields: [projectId], references: [id], onDelete: Cascade)
+}
+
+model ProjectInspiration {
+  id        Int      @id @default(autoincrement())
+  imageUrl  String
+  caption   String?
+  createdAt DateTime @default(now())
+
+  projectId Int
+  project   Project @relation(fields: [projectId], references: [id], onDelete: Cascade)
+}
+
+model DesignerProfile {
+  id          Int      @id @default(autoincrement())
+  userId      Int      @unique
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  bio         String?
+  experience  String?
+  specialties Json?
+  phone       String?
+  instagram   String?
+  website     String?
+  avatarUrl   String?
+  portfolioItems PortfolioItem[]
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @default(now()) @updatedAt
+}
+
+model PortfolioItem {
+  id          Int             @id @default(autoincrement())
+  title       String
+  description String?
+  imageUrl    String?
+  gallery     Json?
+  year        Int?
+  designerId  Int
+  designer    DesignerProfile @relation(fields: [designerId], references: [id], onDelete: Cascade)
+  createdAt   DateTime        @default(now())
+  updatedAt   DateTime        @default(now()) @updatedAt
+}
+
+model Room {
+  id          Int      @id @default(autoincrement())
+  title       String
+  description String?
+  imageUrl    String?
+  order       Int      @default(0)
+  createdAt   DateTime @default(now())
+}
+
+model Story {
+  id          Int      @id @default(autoincrement())
+  title       String
+  kicker      String?  @default("Popular")
+  excerpt     String?
+  content     String?
+  imageUrl    String?
+  author      String?
+  sourceUrl   String?
+  readTime    String?
+  publishedAt DateTime @default(now())
+  createdAt   DateTime @default(now())
+}

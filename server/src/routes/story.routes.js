@@ -1,0 +1,12 @@
+const express = require('express');
+const protect = require('../middleware/auth.middleware');
+const adminMiddleware = require('../middleware/admin.middleware');
+const upload = require('../middleware/uploadMiddleware');
+const { getStories, getStoryById, createStory, updateStory, deleteStory } = require('../controllers/story.controller');
+const router = express.Router();
+router.get('/', getStories);
+router.get('/:id', getStoryById);
+router.post('/', protect, adminMiddleware, upload.single('image'), createStory);
+router.put('/:id', protect, adminMiddleware, upload.single('image'), updateStory);
+router.delete('/:id', protect, adminMiddleware, deleteStory);
+module.exports = router;

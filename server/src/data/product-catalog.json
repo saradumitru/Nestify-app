@@ -1,0 +1,230 @@
+[
+  {
+    "keywords": ["canapea", "sofa", "coltar", "couch", "canapele"],
+    "name": "Canapea / Colțar",
+    "category": "Mobilier living",
+    "links": [
+      { "store": "IKEA", "url": "https://www.ikea.com/ro/ro/cat/canapele-10658/", "label": "Canapele IKEA" },
+      { "store": "Mobexpert", "url": "https://www.mobexpert.ro/living/canapele-si-coltare", "label": "Canapele Mobexpert" },
+      { "store": "JYSK", "url": "https://www.jysk.ro/canapele", "label": "Canapele JYSK" }
+    ]
+  },
+  {
+    "keywords": ["fotoliu", "armchair", "scaun living", "fotolii"],
+    "name": "Fotoliu",
+    "category": "Mobilier living",
+    "links": [
+      { "store": "IKEA", "url": "https://www.ikea.com/ro/ro/cat/fotolii-10664/", "label": "Fotolii IKEA" },
+      { "store": "Mobexpert", "url": "https://www.mobexpert.ro/living/fotolii", "label": "Fotolii Mobexpert" }
+    ]
+  },
+  {
+    "keywords": ["masa cafea", "masuta cafea", "coffee table", "masa de cafea", "masuta de cafea"],
+    "name": "Măsuță de cafea",
+    "category": "Mobilier living",
+    "links": [
+      { "store": "IKEA", "url": "https://www.ikea.com/ro/ro/cat/mese-de-cafea-10902/", "label": "Măsuțe cafea IKEA" },
+      { "store": "Dedeman", "url": "https://www.dedeman.ro/ro/mobila/mese/mese-cafea", "label": "Măsuțe Dedeman" }
+    ]
+  },
+  {
+    "keywords": ["covor", "rug", "carpeta", "covoare", "carpet"],
+    "name": "Covor",
+    "category": "Textile & decor",
+    "links": [
+      { "store": "IKEA", "url": "https://www.ikea.com/ro/ro/cat/covoare-10653/", "label": "Covoare IKEA" },
+      { "store": "JYSK", "url": "https://www.jysk.ro/covoare", "label": "Covoare JYSK" },
+      { "store": "Mobexpert", "url": "https://www.mobexpert.ro/textile/covoare", "label": "Covoare Mobexpert" }
+    ]
+  },
+  {
+    "keywords": ["lampa suspendata", "pendul", "pendant light", "candelabru", "lampa tavan", "lustru"],
+    "name": "Lampă suspendată / Pendul",
+    "category": "Iluminat",
+    "links": [
+      { "store": "IKEA", "url": "https://www.ikea.com/ro/ro/cat/lustre-si-pendule-10707/", "label": "Pendule IKEA" },
+      { "store": "Leroy Merlin", "url": "https://www.leroymerlin.ro/iluminat/lustre-si-pendule", "label": "Pendule Leroy Merlin" }
+    ]
+  },
+  {
+    "keywords": ["lampa podea", "floor lamp", "lampadar", "veioza podea"],
+    "name": "Lampă de podea",
+    "category": "Iluminat",
+    "links": [
+      { "store": "IKEA", "url": "https://www.ikea.com/ro/ro/cat/lampi-de-podea-10613/", "label": "Lămpi podea IKEA" },
+      { "store": "Leroy Merlin", "url": "https://www.leroymerlin.ro/iluminat/lampi-de-podea", "label": "Lămpi podea Leroy Merlin" }
+    ]
+  },
+  {
+    "keywords": ["veioza", "lampa noptiera", "table lamp", "lampa masa", "veioza noptiera"],
+    "name": "Veioză / Lampă de masă",
+    "category": "Iluminat",
+    "links": [
+      { "store": "IKEA", "url": "https://www.ikea.com/ro/ro/cat/veioza-10612/", "label": "Veioze IKEA" },
+      { "store": "JYSK", "url": "https://www.jysk.ro/iluminat/veioza", "label": "Veioze JYSK" }
+    ]
+  },
+  {
+    "keywords": ["noptiera", "nightstand", "bedside table", "comoda mica"],
+    "name": "Noptieră",
+    "category": "Mobilier dormitor",
+    "links": [
+      { "store": "IKEA", "url": "https://www.ikea.com/ro/ro/cat/noptiere-10671/", "label": "Noptiere IKEA" },
+      { "store": "JYSK", "url": "https://www.jysk.ro/dormitor/noptiere", "label": "Noptiere JYSK" }
+    ]
+  },
+  {
+    "keywords": ["pat", "bed", "cadru pat", "headboard", "tablie pat"],
+    "name": "Pat / Cadru de pat",
+    "category": "Mobilier dormitor",
+    "links": [
+      { "store": "IKEA", "url": "https://www.ikea.com/ro/ro/cat/paturi-10675/", "label": "Paturi IKEA" },
+      { "store": "Mobexpert", "url": "https://www.mobexpert.ro/dormitor/paturi", "label": "Paturi Mobexpert" },
+      { "store": "JYSK", "url": "https://www.jysk.ro/dormitor/paturi", "label": "Paturi JYSK" }
+    ]
+  },
+  {
+    "keywords": ["dulap", "wardrobe", "sifonier", "dressing", "garderoba"],
+    "name": "Dulap / Dressing",
+    "category": "Mobilier dormitor",
+    "links": [
+      { "store": "IKEA", "url": "https://www.ikea.com/ro/ro/cat/dulapuri-10656/", "label": "Dulapuri IKEA" },
+      { "store": "Mobexpert", "url": "https://www.mobexpert.ro/dormitor/dulapuri", "label": "Dulapuri Mobexpert" }
+    ]
+  },
+  {
+    "keywords": ["comoda", "dresser", "chest of drawers", "comoda sertare", "sertar"],
+    "name": "Comodă cu sertare",
+    "category": "Mobilier depozitare",
+    "links": [
+      { "store": "IKEA", "url": "https://www.ikea.com/ro/ro/cat/comode-10657/", "label": "Comode IKEA" },
+      { "store": "JYSK", "url": "https://www.jysk.ro/comode", "label": "Comode JYSK" }
+    ]
+  },
+  {
+    "keywords": ["birou", "desk", "masa birou", "birou lucru"],
+    "name": "Birou",
+    "category": "Mobilier birou",
+    "links": [
+      { "store": "IKEA", "url": "https://www.ikea.com/ro/ro/cat/birouri-10714/", "label": "Birouri IKEA" },
+      { "store": "Dedeman", "url": "https://www.dedeman.ro/ro/mobila/birouri", "label": "Birouri Dedeman" }
+    ]
+  },
+  {
+    "keywords": ["scaun birou", "office chair", "scaun ergonomic", "scaun rotativ"],
+    "name": "Scaun de birou",
+    "category": "Mobilier birou",
+    "links": [
+      { "store": "IKEA", "url": "https://www.ikea.com/ro/ro/cat/scaune-de-birou-10661/", "label": "Scaune birou IKEA" },
+      { "store": "Dedeman", "url": "https://www.dedeman.ro/ro/mobila/scaune-birou", "label": "Scaune birou Dedeman" }
+    ]
+  },
+  {
+    "keywords": ["raft", "biblioteca", "bookcase", "etajera", "shelving", "raftul"],
+    "name": "Raft / Bibliotecă",
+    "category": "Mobilier depozitare",
+    "links": [
+      { "store": "IKEA", "url": "https://www.ikea.com/ro/ro/cat/rafturi-11465/", "label": "Rafturi IKEA" },
+      { "store": "Dedeman", "url": "https://www.dedeman.ro/ro/mobila/rafturi-biblioteci", "label": "Rafturi Dedeman" }
+    ]
+  },
+  {
+    "keywords": ["oglinda", "mirror", "oglinzi", "oglinda perete"],
+    "name": "Oglindă",
+    "category": "Decor",
+    "links": [
+      { "store": "IKEA", "url": "https://www.ikea.com/ro/ro/cat/oglinzi-10667/", "label": "Oglinzi IKEA" },
+      { "store": "JYSK", "url": "https://www.jysk.ro/decoratiuni/oglinzi", "label": "Oglinzi JYSK" }
+    ]
+  },
+  {
+    "keywords": ["tablou", "artwork", "painting", "picture", "poster", "cadru foto", "arta perete"],
+    "name": "Tablou / Artă perete",
+    "category": "Decor",
+    "links": [
+      { "store": "IKEA", "url": "https://www.ikea.com/ro/ro/cat/tablouri-si-postere-10667/", "label": "Tablouri IKEA" },
+      { "store": "Desenio", "url": "https://desenio.ro/", "label": "Postere Desenio" }
+    ]
+  },
+  {
+    "keywords": ["planta", "ghiveci", "plant", "succulenta", "cactus", "monstera", "plante", "ghiveci floare"],
+    "name": "Plante & ghivece",
+    "category": "Decor verde",
+    "links": [
+      { "store": "IKEA", "url": "https://www.ikea.com/ro/ro/cat/ghivece-plante-10646/", "label": "Ghivece IKEA" },
+      { "store": "Leroy Merlin", "url": "https://www.leroymerlin.ro/plante-si-gradina/plante-de-interior", "label": "Plante interior Leroy Merlin" }
+    ]
+  },
+  {
+    "keywords": ["perna decorativa", "cushion", "throw pillow", "perne", "pillow"],
+    "name": "Perne decorative",
+    "category": "Textile",
+    "links": [
+      { "store": "IKEA", "url": "https://www.ikea.com/ro/ro/cat/perne-decorative-10670/", "label": "Perne IKEA" },
+      { "store": "JYSK", "url": "https://www.jysk.ro/textile/perne-decorative", "label": "Perne JYSK" }
+    ]
+  },
+  {
+    "keywords": ["draperie", "perdea", "curtain", "draperii", "perdele"],
+    "name": "Draperii / Perdele",
+    "category": "Textile",
+    "links": [
+      { "store": "IKEA", "url": "https://www.ikea.com/ro/ro/cat/draperii-10648/", "label": "Draperii IKEA" },
+      { "store": "JYSK", "url": "https://www.jysk.ro/textile/draperii", "label": "Draperii JYSK" }
+    ]
+  },
+  {
+    "keywords": ["masa dining", "masa sufragerie", "dining table", "masa de masa"],
+    "name": "Masă dining",
+    "category": "Mobilier sufragerie",
+    "links": [
+      { "store": "IKEA", "url": "https://www.ikea.com/ro/ro/cat/mese-de-dining-10698/", "label": "Mese dining IKEA" },
+      { "store": "Mobexpert", "url": "https://www.mobexpert.ro/sufragerie/mese-dining", "label": "Mese dining Mobexpert" }
+    ]
+  },
+  {
+    "keywords": ["scaun dining", "dining chair", "scaun sufragerie", "scaune masa"],
+    "name": "Scaune dining",
+    "category": "Mobilier sufragerie",
+    "links": [
+      { "store": "IKEA", "url": "https://www.ikea.com/ro/ro/cat/scaune-de-dining-10700/", "label": "Scaune dining IKEA" },
+      { "store": "JYSK", "url": "https://www.jysk.ro/scaune-dining", "label": "Scaune dining JYSK" }
+    ]
+  },
+  {
+    "keywords": ["consola", "console table", "masa intrare", "masa hol", "sideboard", "bufet"],
+    "name": "Consolă / Sideboard",
+    "category": "Mobilier",
+    "links": [
+      { "store": "IKEA", "url": "https://www.ikea.com/ro/ro/cat/console-10909/", "label": "Console IKEA" },
+      { "store": "JYSK", "url": "https://www.jysk.ro/console-si-sideboarduri", "label": "Console JYSK" }
+    ]
+  },
+  {
+    "keywords": ["lumanare", "candle", "lumanari", "sfeșnic", "candleholder", "candelabru masa"],
+    "name": "Lumânări & sfeșnice",
+    "category": "Decor",
+    "links": [
+      { "store": "IKEA", "url": "https://www.ikea.com/ro/ro/cat/lumanari-si-suporturi-10676/", "label": "Lumânări IKEA" },
+      { "store": "JYSK", "url": "https://www.jysk.ro/decoratiuni/lumanari", "label": "Lumânări JYSK" }
+    ]
+  },
+  {
+    "keywords": ["vaza", "vase", "vas decorativ", "vaza flori", "decoratiune masa"],
+    "name": "Vaze & decorațiuni",
+    "category": "Decor",
+    "links": [
+      { "store": "IKEA", "url": "https://www.ikea.com/ro/ro/cat/vaze-si-boluri-10670/", "label": "Vaze IKEA" },
+      { "store": "JYSK", "url": "https://www.jysk.ro/decoratiuni/vaze", "label": "Vaze JYSK" }
+    ]
+  },
+  {
+    "keywords": ["cuier", "coat rack", "cuier intrare", "cuier hol", "umerase"],
+    "name": "Cuier",
+    "category": "Mobilier hol",
+    "links": [
+      { "store": "IKEA", "url": "https://www.ikea.com/ro/ro/cat/cuiere-10681/", "label": "Cuiere IKEA" },
+      { "store": "JYSK", "url": "https://www.jysk.ro/cuiere", "label": "Cuiere JYSK" }
+    ]
+  }
+]

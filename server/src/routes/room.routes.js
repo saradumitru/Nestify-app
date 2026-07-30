@@ -1,0 +1,11 @@
+const express = require('express');
+const protect = require('../middleware/auth.middleware');
+const adminMiddleware = require('../middleware/admin.middleware');
+const upload = require('../middleware/uploadMiddleware');
+const { getRooms, createRoom, updateRoom, deleteRoom } = require('../controllers/room.controller');
+const router = express.Router();
+router.get('/', getRooms);
+router.post('/', protect, adminMiddleware, upload.single('image'), createRoom);
+router.put('/:id', protect, adminMiddleware, upload.single('image'), updateRoom);
+router.delete('/:id', protect, adminMiddleware, deleteRoom);
+module.exports = router;
