@@ -203,7 +203,7 @@ NestifyApp/
 ## Clone the repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/Nestify.git
+git clone https://github.com/saradumitru/Nestify-app.git
 ```
 
 ## Navigate to the project
