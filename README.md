@@ -244,7 +244,7 @@ Do **not** commit the `.env` file to GitHub.
 
 ---
 
-# ▶ Running the Project
+# Running the Project
 
 Start the backend:
 
